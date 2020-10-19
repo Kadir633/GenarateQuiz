@@ -1,0 +1,40 @@
+﻿@model GenarateQuizWebUI.Models.NewsListViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+
+    <table class="table table-striped projects">
+        <thead>
+            <tr>
+                <th>Makale</th>
+                <th>Teste Git</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model.NewsList)
+            {
+                <tr>
+
+                    <td>
+                        <div class="form-group">
+                            @Html.Raw(item.Title)
+                        </div>
+                    </td>
+                    <td><a href="~/home/newsquestion?address=@item.Link" class="btn btn-info" target="_blank">Oluştur</a></td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+
+
+    <div class="form-group">
+        <a href="~/Home/NewsList" class="btn btn-success"><i class="fa fa-pencil"></i> Testlerim </a>
+        <a href="~/Account/Login" class="btn btn-danger"><i class="fa fa-pencil"></i> Çıkış </a>
+    </div>
+
+</div>

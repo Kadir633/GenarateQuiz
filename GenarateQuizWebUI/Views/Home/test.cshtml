@@ -1,0 +1,65 @@
+﻿@model QuestionsModel
+@{
+    ViewData["Title"] = "test";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>test</h1>
+
+@foreach (var item in Model.Questions)
+{
+    <div>
+        <div class="form-Group">
+            <iframe src="@item.Link" width="100%" height="400"></iframe>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <p>
+            <label for="radio_buttons1">@item.Selection1</label><br />
+            <input type="radio" class="radio" name="radio_button" value="A1" /> @item.A1<br />
+            <input type="radio" class="radio" name="radio_button" value="B1" /> @item.B1<br />
+            <input type="radio" class="radio" name="radio_button" value="C1" /> @item.C1<br />
+            <input type="radio" class="radio" name="radio_button" value="D1" /> @item.D1<br />
+        </p>
+
+    </div>
+    <div class="form-group">
+        <p>
+            <label for="radio_buttons2">@item.Selection2</label><br />     
+            <input type="radio" class="radio" name="radio_button2" value="A2" /> @item.A2<br />
+            <input type="radio" class="radio" name="radio_button2" value="B2" /> @item.B2<br />
+            <input type="radio" class="radio" name="radio_button2" value="C2" /> @item.C2<br />
+            <input type="radio" class="radio" name="radio_button2" value="D2" /> @item.D2<br />
+        </p>                                                              
+
+    </div>
+    <div class="form-group">
+        <p>
+            <label for="radio_buttons3">@item.Selection3</label><br />
+            <input type="radio" class="radio" name="radio_button3" value="A3" /> @item.A3<br />
+            <input type="radio" class="radio" name="radio_button3" value="B3" /> @item.B3<br />
+            <input type="radio" class="radio" name="radio_button3" value="C3" /> @item.C3<br />
+            <input type="radio" class="radio" name="radio_button3" value="D3" /> @item.D3<br />
+        </p>
+
+    </div>
+    <div class="form-group">
+        <p>
+            <label for="radio_buttons4">@item.Selection4</label><br />
+            <input type="radio" class="radio" name="radio_button4" value="A4" /> @item.A4<br />
+            <input type="radio" class="radio" name="radio_button4" value="B4" /> @item.B4<br />
+            <input type="radio" class="radio" name="radio_button4" value="C4" /> @item.C4<br />
+            <input type="radio" class="radio" name="radio_button4" value="D4" /> @item.D4<br />
+        </p>
+
+    </div>
+}
+<div class="form-Group">
+    <button type="button" class="btn btn-success">Cevapla</button>
+</div>
+
+
+
+

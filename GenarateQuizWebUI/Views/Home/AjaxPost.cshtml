@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "AjaxTest";
+}
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+<h1>AjaxTest</h1>
+
+<form controller="Home" action="AjaxPost" method="post" name="ajaxpost" novalidate>
+    <input type="text" name="ad" id="ad"/>
+    <input type="button" onclick="" name="sbmt" id="sbmt"/>
+</form>
+<script type="text/javascript">
+
+
+        function AjaxFormSubmit() {
+            var postData = "SinavID=" + $("#ad").val();
+
+            $.ajax({
+                type: "POST",
+                url: '/home/ajaxpost',
+                datatype: 'json',
+                data: postData,
+                success: function (data) {
+                    if (data === 'Ok') {
+                        window.location.href = '/';
+                        console.log(window.location.origin);
+                        location.reload;
+                    }
+                    else {
+
+                    }
+                }
+            });
+            //this is mandatory other wise your from will be submitted.
+            return false;
+    };
+
+        $("#sbmt").click(function () {
+            AjaxFormSubmit();
+        }
+        );
+</script>

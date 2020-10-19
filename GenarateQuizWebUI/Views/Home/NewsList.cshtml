@@ -1,0 +1,58 @@
+﻿@model QuestionsModel
+@{
+    Layout = Layout = "~/Views/Shared/_Layout.cshtml"; ;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+
+
+</head>
+<body>
+
+    <!-- start project list -->
+    <table class="table table-striped projects">
+        <thead>
+
+            <tr>
+
+
+                <th>Başlık</th>
+                <th>Tarih</th>
+                <th>Sil</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Questions)
+            {
+                <tr>
+
+                    <td>
+                        <a href="~/Home/test?id=@item.Id">@item.Link</a>
+
+                    </td>
+                    <td>
+                        <label>@item.Baslik</label>
+
+                    </td>
+
+                    <td>
+
+
+                        <a href="~/Home/Delete?id=@item.Id" class="btn btn-danger"><i class="fa fa-pencil"></i> sil </a>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <!-- end project list -->
+    <div class="form-group">
+        <a href="~/" class="btn btn-success"><i class="fa fa-pencil"></i> Anasayfa </a>
+    </div>
+</body>
+</html>

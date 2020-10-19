@@ -1,0 +1,146 @@
+﻿@model GenarateQuizWebUI.Models.NewsQuestionViewModel
+
+
+
+<div>
+    <div class="form-Group">
+        <iframe src="@Model.NewsAddress" width="100%" height="400"></iframe>
+    </div>
+
+</div>
+
+<form controller="Home" action="NewsQuestion" method="post" >
+    <div class="row ">
+
+        <div class="col-md-12 col-sm-12 form-group">
+            <input class="form-control" value="@Model.NewsAddress" name="Link" type="hidden" />
+        </div>
+    
+        <div class="col-md-12 col-sm-12 form-group">
+            <input class="form-control" placeholder="Soru 1" name="Selection1" required="required" />
+        </div>
+        <div class="col-md-6 col-sm-6 form-group">
+            <input class="form-control" name="A1" placeholder="A" required="required" />
+        </div>
+        <div class="col-md-6 col-sm-6 form-group">
+            <input class="form-control" name="B1" placeholder="B" required="required" />
+        </div>
+        <div class="col-md-6 col-sm-6 form-group">
+            <input class="form-control" name="C1" placeholder="C" required="required" />
+        </div>
+        <div class="col-md-6 col-sm-6 form-group">
+            <input class="form-control" name="D1" placeholder="D" required="required" />
+        </div>
+        <div class="col-md-5 col-sm-5"></div>
+        <div class="col-md-2 col-sm-2">
+            <div>
+                <select class="form-control" name="CorrectAnswer1" required="required" >                
+                    <option  ></option>
+                    <option  value="A1">A</option>
+                    <option  value="B1">B</option>
+                    <option  value="C1">C</option>
+                    <option  value="D1">D</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 form-group">
+            <input class="form-control" type="hidden" />
+        </div>
+        <div class="col-md-12 col-sm-12 form-group">
+            <input class="form-control" placeholder="Soru 2" name="Selection2" required="required" />
+        </div>
+        <div class="col-md-6 col-sm-6 form-group">
+            <input class="form-control" name="A2" placeholder="A" required="required" />
+        </div>
+        <div class="col-md-6 col-sm-6 form-group">
+            <input class="form-control" name="B2" placeholder="B" required="required" />
+        </div>
+        <div class="col-md-6 col-sm-6 form-group">
+            <input class="form-control" name="C2" placeholder="C" required="required" />
+        </div>
+        <div class="col-md-6 col-sm-6 form-group">
+            <input class="form-control" name="D2" placeholder="D" required="required" />
+        </div>
+        <div class="col-md-5 col-sm-5"></div>
+        <div class="col-md-2 col-sm-2">
+            <div>
+                <select class="form-control" name="CorrectAnswer2" required="required" >
+                    <option></option>
+                    <option value="A1">A</option>
+                    <option value="B1">B</option>
+                    <option value="C1">C</option>
+                    <option value="D1">D</option>
+                </select>                      
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 form-group">
+            <input class="form-control" type="hidden" />
+        </div>
+        <div class="col-md-12 col-sm-12 form-group">
+            <input class="form-control" placeholder="Soru 3" name="Selection3" required="required" />
+        </div>
+        <div class="col-md-6 col-sm-6 form-group">
+            <input class="form-control" name="A3" placeholder="A" required="required" />
+        </div>
+        <div class="col-md-6 col-sm-6 form-group">
+            <input class="form-control" name="B3" placeholder="B" required="required" />
+        </div>
+        <div class="col-md-6 col-sm-6 form-group">
+            <input class="form-control" name="C3" placeholder="C" required="required" />
+        </div>
+        <div class="col-md-6 col-sm-6 form-group">
+            <input class="form-control" name="D3" placeholder="D" required="required" />
+        </div>
+        <div class="col-md-5 col-sm-5"></div>
+        <div class="col-md-2 col-sm-2">
+            <div>
+                <select class="form-control" name="CorrectAnswer3" required="required" >
+                    <option></option>
+                    <option value="A1">A</option>
+                    <option value="B1">B</option>
+                    <option value="C1">C</option>
+                    <option value="D1">D</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 form-group">
+            <input class="form-control" type="hidden" />
+        </div>
+        <div class="col-md-12 col-sm-12 form-group">
+            <input class="form-control" placeholder="Soru 4" name="Selection4" required="required" />
+        </div>
+        <div class="col-md-6 col-sm-6 form-group">
+            <input class="form-control" name="A4" placeholder="A" required="required" />
+        </div>
+        <div class="col-md-6 col-sm-6 form-group">
+            <input class="form-control" name="B4" placeholder="B" required="required" />
+        </div>
+        <div class="col-md-6 col-sm-6 form-group">
+            <input class="form-control" name="C4" placeholder="C" required="required" />
+        </div>
+        <div class="col-md-6 col-sm-6 form-group">
+            <input class="form-control" name="D4" placeholder="D" required="required" />
+        </div>
+        <div class="col-md-5 col-sm-5"></div>
+        <div class="col-md-2 col-sm-2">
+            <div>
+                <select class="form-control" name="CorrectAnswer4">
+                    <option></option>
+                    <option value="A1">A</option>
+                    <option value="B1">B</option>
+                    <option value="C1">C</option>
+                    <option value="D1">D</option>
+                </select>                      
+            </div>
+        </div>
+        <div class="col-md-5 col-sm-5"></div>
+    </div>
+    <div class="ln_solid">
+        <div class="form-group">
+            <div class="col-md-12 offset-md-12">
+                <button type='submit' class="btn btn-primary">Kaydet</button>
+                <button type='reset' class="btn btn-success">Sıfırla</button>
+            </div>
+        </div>
+    </div>
+</form>

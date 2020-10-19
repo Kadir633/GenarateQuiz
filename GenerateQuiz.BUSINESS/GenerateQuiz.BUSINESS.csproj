@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GenerateQuiz.DAL\GenerateQuiz.DAL.csproj" />
+    <ProjectReference Include="..\GenerateQuiz.ENTITIES\GenerateQuiz.ENTITIES.csproj" />
+  </ItemGroup>
+
+</Project>
